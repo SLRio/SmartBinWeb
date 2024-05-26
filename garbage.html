@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage Level Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 40px;
+            text-align: center;
+            position: relative; /* Added for positioning the button */
+        }
+        .chart-container {
+            margin-top: 20px;
+        }
+        .back-home-button {
+            position: absolute; /* Positioned relative to the container */
+            top: 20px; /* Adjust top position as needed */
+            left: 20px; /* Adjust left position as needed */
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .back-home-button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Garbage Level Details</h1>
+    </header>
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="garbageChart"></canvas>
+        </div>
+        <a href="index.html" class="back-home-button">Home</a> <!-- Position adjusted -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Sample garbage level data
+        const garbageLevelData = [40, 60]; // Replace with your actual data
+
+        // Generate pie chart
+        const ctx = document.getElementById('garbageChart').getContext('2d');
+        const garbageChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Free Space ', 'Garbage Amount'],
+                datasets: [{
+                    data: garbageLevelData,
+                    backgroundColor: ['#36A2EB', '#FFCE56'],
+                    hoverBackgroundColor: ['#36A2EB', '#FFCE56']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+</html>
