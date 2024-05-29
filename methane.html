@@ -37,6 +37,10 @@
         .back-home-button:hover {
             background-color: #444;
         }
+        #methaneValue {
+            font-size: 24px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -47,6 +51,7 @@
         <div class="chart-container">
             <canvas id="methaneChart"></canvas>
         </div>
+        <div id="methaneValue">Methane Gas Level: <span id="methanePPM">300ppm</span></div>
         <a href="index.html" class="back-home-button">Home</a>
     </div>
 
@@ -58,7 +63,7 @@
             data: {
                 labels: ['Freespace', 'Methane Gas'],
                 datasets: [{
-                    data: [20, 80], // Sample data (replace with actual data)
+                    data: [100 - 300, 300], // Sample data (replace with actual data)
                     backgroundColor: ['#36A2EB', '#FFCE56'],
                     hoverBackgroundColor: ['#36A2EB', '#FFCE56']
                 }]
