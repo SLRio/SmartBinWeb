@@ -39,6 +39,10 @@
         .back-home-button:hover {
             background-color: #444;
         }
+        #garbageLevel {
+            font-size: 24px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -49,20 +53,21 @@
         <div class="chart-container">
             <canvas id="garbageChart"></canvas>
         </div>
+        <div id="garbageLevel">Garbage Level: <span id="garbageValue">30 cm</span></div>
         <a href="index.html" class="back-home-button">Home</a> <!-- Position adjusted -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         // Sample garbage level data
-        const garbageLevelData = [40, 60]; // Replace with your actual data
+        const garbageLevelData = [100 - 30, 30]; // Replace with your actual data
 
         // Generate pie chart
         const ctx = document.getElementById('garbageChart').getContext('2d');
         const garbageChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: ['Free Space ', 'Garbage Amount'],
+                labels: ['Free Space', 'Garbage Amount'],
                 datasets: [{
                     data: garbageLevelData,
                     backgroundColor: ['#36A2EB', '#FFCE56'],
@@ -74,6 +79,9 @@
                 maintainAspectRatio: false
             }
         });
+
+        // Update garbage level text
+        document.getElementById('garbageValue').innerText = '30 cm';
     </script>
 </body>
 </html>
