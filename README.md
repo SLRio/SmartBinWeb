@@ -1,2 +1,0 @@
-# SmartBinWeb
-front end
