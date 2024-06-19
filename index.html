@@ -11,16 +11,19 @@
             padding: 0;
             background-color: #f5f5f5;
         }
-        #container {
-            max-width: 1200px;
-            margin: 0 auto;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            vertical-align: top;
             padding: 20px;
         }
         #header {
             background-color: #333;
             color: #fff;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
         }
         #header ul {
             list-style-type: none;
@@ -40,16 +43,11 @@
             color: #fff;
             text-decoration: none;
         }
-        #content {
-            display: flex;
-            margin-top: 20px;
-        }
         #right {
-            flex: 3;
+            background-color: #fff;
             padding: 20px;
         }
         #left {
-            flex: 1;
             background-color: #eee;
             padding: 20px;
         }
@@ -84,67 +82,72 @@
 </head>
 <body>
 <div id="container">
-    <div id="header">
-        <div>
-            <ul>
-                <li><a href="#" class="on">Home</a></li>
-                <li><a href="#idea">Idea</a></li>
-                <li><a href="#author">Author</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <h1><a href="#">Busy City - SmartBin</a></h1>
-        </div>
-    </div>
-    <div id="content">
-        <div id="right">
-            <h2 id="idea">The <em>Idea</em></h2>
-            <p>SmartBin is an innovative project that aims to keep our cities cleaner and safer. It automatically sends SMS messages to the city council whenever a garbage bin is filled to its maximum capacity. If the methane gas level exceeds a certain threshold, an emergency message is also sent to alert the authorities.</p>
-            
-            <div class="data-container"><b>
-                <h2>Garbage and Methane Levels</h2>
-                <p>Garbage Amount: <span id="garbageAmount">Loading...</span> </p>
-                <p>Methane Amount: <span id="methaneAmount">Loading...</span> </p></b>
-            </div>
+    <table>
+        <tr>
+            <td colspan="2" id="header">
+                <div>
+                    <ul>
+                        <li><a href="#" class="on">Home</a></li>
+                        <li><a href="#idea">Idea</a></li>
+                        <li><a href="#author">Author</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <h1><a href="#">Busy City - SmartBin</a></h1>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="left" style="width: 25%;">
+                <h2>From the <em>Gallery</em></h2>
+                <ul class="thumbs">
+                    <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
+                    <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
+                    <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
+                    <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
+                    <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
+                    <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
+                </ul>
+                <h2>Useful <em>Links</em></h2>
+                <ul>
+                    <li><a href="http://www.growldesign.co.uk">Web Development &amp; Design</a></li>
+                    <li><a href="#">CSSBeauty</a></li>
+                    <li><a href="#">CSSMania</a></li>
+                    <li><a href="#">Learn CSS</a></li>
+                </ul>
+                <h2>More <em>Text</em></h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In tellus nisi, iaculis ac, sagittis vel.</p>
+                <h2>More <em>Text</em></h2>
+                <p>Cras laoreet hendrerit leo. Nam luctus condimentum nunc. Maecenas congue consectetuer risus. Proin dictum, risus sed ornare gravida, ligula mauris.</p>
+            </td>
+            <td id="right" style="width: 75%;">
+                <h2 id="idea">The <em>Idea</em></h2>
+                <p>SmartBin is an innovative project that aims to keep our cities cleaner and safer. It automatically sends SMS messages to the city council whenever a garbage bin is filled to its maximum capacity. If the methane gas level exceeds a certain threshold, an emergency message is also sent to alert the authorities.</p>
+                
+                <div class="data-container">
+                    <h2>Garbage and Methane Levels</h2>
+                    <p>Garbage Amount: <span id="garbageAmount">Loading...</span> </p>
+                    <p>Methane Amount: <span id="methaneAmount">Loading...</span> </p>
+                </div>
 
-            <h2 id="author">The <em>Author</em></h2>
-            <p>My name is Semini, and I am a 24-year-old female from Colombo, <acronym title="United Kingdom">UK</acronym>. I work full-time as a Web Designer for a very well-known company and freelance out of work through my growldesign website.</p>
-            <p>I made my first IOT project and have been using <acronym title="eXtensible HyperText Markup Language">XHTML,NodeRed , MQTT Java Script
+                <h2 id="author">The <em>Author</em></h2>
+                <p>My name is Semini, and I am a 24-year-old female from Colombo, <acronym title="United Kingdom">UK</acronym>. I work full-time as a Web Designer for a very well-known company and freelance out of work through my growldesign website.</p>
+                <p>I made my first IOT project and have been using <acronym title="eXtensible HyperText Markup Language">XHTML,NodeRed , MQTT Java Script
 
-            </acronym> &amp; <acronym title="Cascading Style Sheets">CSS</acronym> Other platforms I used include <acronym title="Hypertext Pre-processor">
+                </acronym> &amp; <acronym title="Cascading Style Sheets">CSS</acronym> Other platforms I used include <acronym title="Hypertext Pre-processor">
 
-            </acronym>, <acronym title="Open source Structured Query Language">Mongodb</acronym>, <acronym title="eXtensible Markup Language">XML
+                </acronym>, <acronym title="Open source Structured Query Language">Mongodb</acronym>, <acronym title="eXtensible Markup Language">XML
 
-            </acronym>, and <acronym title="eXtensible StyleSheet Language Transformation"></acronym>. For a full list, take a look at my LinkedIn.</p>
-            <h2 id="contact">Contact <em>Me</em></h2>
-            <p>If you are a small business wanting IOT help, or a company looking to outsource, feel free to contact me for a quote.</p>
-        </div>
-        <div id="left">
-            <h2>From the <em>Gallery</em></h2>
-            <ul class="thumbs">
-                <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
-                <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
-                <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
-                <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
-                <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
-                <li><a href="#"><img src="img/header_top.gif" width="50" height="50" alt="Thumbnail Example" /></a></li>
-            </ul>
-            <h2>Useful <em>Links</em></h2>
-            <ul>
-                <li><a href="http://www.growldesign.co.uk">Web Development &amp; Design</a></li>
-                <li><a href="#">CSSBeauty</a></li>
-                <li><a href="#">CSSMania</a></li>
-                <li><a href="#">Learn CSS</a></li>
-            </ul>
-            <h2>More <em>Text</em></h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In tellus nisi, iaculis ac, sagittis vel.</p>
-            <h2>More <em>Text</em></h2>
-            <p>Cras laoreet hendrerit leo. Nam luctus condimentum nunc. Maecenas congue consectetuer risus. Proin dictum, risus sed ornare gravida, ligula mauris.</p>
-        </div>
-    </div>
-</div>
-<div id="footer">
-    <!-- It is not an imperative that you leave a link to my site but I would be grateful if you did -->
-    <p>Copyright &copy; 2024 SmartBin. All Rights Reserved. <a href="http://validator.w3.org/check/referer">XHTML 1.1</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer?warning=no&amp;profile=css2">CSS</a> | design/inspired by <a href="http://www.growldesign.co.uk">growldesign</a></p>
+                </acronym>, and <acronym title="eXtensible StyleSheet Language Transformation"></acronym>. For a full list, take a look at my LinkedIn.</p>
+                <h2 id="contact">Contact <em>Me</em></h2>
+                <p>If you are a small business wanting IOT help, or a company looking to outsource, feel free to contact me for a quote.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" id="footer">
+                <p>Copyright &copy; 2024 SmartBin. All Rights Reserved. <a href="http://validator.w3.org/check/referer">XHTML 1.1</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer?warning=no&amp;profile=css2">CSS</a> | design/inspired by <a href="http://www.growldesign.co.uk">growldesign</a></p>
+            </td>
+        </tr>
+    </table>
 </div>
 
 <script>
