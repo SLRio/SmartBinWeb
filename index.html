@@ -5,6 +5,25 @@
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
     <link href="bc-stylesheet.css" rel="stylesheet" type="text/css" />
     <style>
+
+        .container {
+            width: 80%; /* Adjust width as needed */
+            margin: 0 auto; /* Center the container */
+            padding: 20px;
+        }
+        table {
+            width: 100%; /* Table takes full width of container */
+            border-collapse: collapse; /* Remove default spacing between table cells */
+        }
+        td {
+            padding: 10px; /* Add padding to table cells */
+            vertical-align: top; /* Align content at the top of cells */
+        }
+        iframe {
+            width: 100%; /* Iframe takes full width of its container */
+            height: 500px; /* Adjust height as needed */
+            border: none; /* Remove iframe border */
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -101,9 +120,17 @@
             <p>SmartBin is an innovative project that aims to keep our cities cleaner and safer. It automatically sends SMS messages to the city council whenever a garbage bin is filled to its maximum capacity. If the methane gas level exceeds a certain threshold, an emergency message is also sent to alert the authorities.</p>
             
             <div class="data-container"><b>
-                <h2>Garbage and Methane Levels</h2>
-                <p>Garbage Amount: <span id="garbageAmount">Loading...</span> </p>
-                <p>Methane Amount: <span id="methaneAmount">Loading...</span> </p></b>
+                <div class="container">
+        <table>
+            <tr>
+                <td>
+                    <iframe src="https://anotherwebsite.com" title="Website 2"></iframe>
+                </td>
+            </tr>    
+            
+            <!-- You can add more rows and columns as needed -->
+        </table>
+    </div>
             </div>
 
             <h2 id="author">The <em>Author</em></h2>
